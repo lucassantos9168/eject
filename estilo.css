@@ -1,0 +1,388 @@
+@font-face {
+    font-family: pricedown;
+    src: url(fontes/pricedown.otf);
+}
+
+@font-face {
+    font-family: diploma;
+    src: url(fontes/diploma.ttf);
+}
+
+@font-face {
+    font-family: ahronbd;
+    src: url(fontes/ahronbd.ttf);
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    animation: fadein 1s;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    scroll-behavior: smooth;
+    align-content: center;
+    justify-content: center;
+}
+
+#preloader {
+    background: black url(/imagens/preloader.gif) no-repeat center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.bpm{
+    text-align: center;
+    width: 100%;
+}
+
+.bpm p {
+    color: white;
+    font-family: pricedown;
+    font-size: 24px;
+    user-select: none;
+    padding-top: 1rem;
+    margin: 0 auto;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: black;
+}
+
+.bpm img {
+    vertical-align: middle;
+    width: 64px;
+}
+
+.row {
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+
+}
+
+.row p {
+    text-decoration: none;
+    user-select: none;
+}
+
+.row ul {
+    list-style: none;
+    user-select: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.row li {
+    font-size: 24px;
+    padding-bottom: 2rem;
+    font-family: ahronbd;
+    color: white;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: black;
+    transition: all 0.5s;
+}
+
+.row li:hover {
+    color: gray;
+}
+
+.nav {
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(20, 20, 20);
+    border-radius: 50px;
+    transition: all 1s;
+}
+
+.nav:hover {
+    background-color: rgb(32, 32, 32);
+}
+
+.nav img {
+    width: 32px;
+    transition: all 0.5s;
+}
+
+.nav img:hover {
+    transform: scale(1.5);
+}
+
+
+.toggle {
+    background-color: rgb(20, 20, 20);
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.toggle:hover {
+    transform: scale(-2);
+    background-color: rgb(32, 32, 32);
+}
+
+.toggle p {
+    padding-left: 22px;
+    padding-top: 27px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-family: pricedown;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.menu {
+    width: 148px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.menu:hover {
+    transform: scale(1.1);
+    background-color: rgb(32, 32, 32);
+}
+
+.roda {
+    background-color: rgb(20, 20, 20);
+    height: 100px;
+    width: 100px;
+    transform: scale(0);
+    border-radius: 50px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.roda:hover {
+    background-color: rgb(32, 32, 32);
+}
+
+.roda a {
+    display: inline-block;
+    position: absolute;
+    font-size: 55px;
+    transition: all 0.5s;
+}
+
+.roda a img {
+    width: 15px;
+
+}
+
+.roda a img:hover {
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    background-color: black;
+
+}
+
+.roda a:nth-child(1) {
+    top: 0px;
+    left: 43px;
+}
+
+.roda a:nth-child(2) {
+    top: -37px;
+    left: 43px;
+}
+
+.roda a:nth-child(3) {
+    top: 37px;
+    left: 43px;
+}
+
+.roda a:nth-child(4) {
+    top: 0px;
+    left: 80px;
+}
+
+.roda a:nth-child(5) {
+    top: 0px;
+    left: 5px;
+}
+
+.form {
+    background-color: rgb(20, 20, 20);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.form input {
+    margin: 0.3rem;
+    border-radius: 5px;
+    padding: 0.1rem;
+    transition: all 1s;
+}
+
+input::placeholder {
+    font-family: ahronbd;
+    font-size: 14px;
+    padding-left: 0.5rem;
+    color: grey;
+    text-decoration: none;
+    user-select: none;
+}
+
+input:focus {
+    outline: 0;
+}
+
+input:valid {
+    border-width: 5px;
+    border-radius: 5px;
+    border-left-color: transparent;
+    border-right-color: green;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+input:invalid {
+    border-width: 5px;
+    border-radius: 5px;
+    border-left-color: transparent;
+    border-right-color: red;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.form button {
+    font-family: pricedown;
+    background-color:rgb(20, 20, 20);
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.form button:hover {
+    background-color: rgb(32, 32, 32);
+}
+
+.form button:active {
+    background-color: goldenrod;
+    transform: translateY(2px);
+}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    position: fixed;
+	bottom: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer img {
+    width: 16px;
+}
+
+.footer p {
+    font-family: pricedown;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.footer p:hover {
+    color: gray;
+}
+
+.timeline {
+    transition: all 1s;
+}
+
+.timeline button {
+    background: none;
+    text-decoration: none;
+    border: 0px;
+    font-family: pricedown;
+    color: white;
+    font-size: 32px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.timeline button:hover {
+    background: none;
+    transform: scale(1.1);
+}
+
+.timeline button img {
+    padding-top: 0.8rem;
+}
+
+.timeline .card {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-family: ahronbd;
+    border-radius: 20px;
+    transition: all 1s;
+    user-select: none;
+    text-align: justify;
+}
+
+.timeline .card:active {
+    background-color: black;
+}
+
+.carousel img {
+    padding-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.carousel p {
+    color: white;
+    font-family: pricedown;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.carousel p:hover {
+    color: gray;
+}
